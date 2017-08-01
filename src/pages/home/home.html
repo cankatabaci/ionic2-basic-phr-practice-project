@@ -1,0 +1,70 @@
+<ion-header>
+  <ion-navbar hideBackButton="true">
+    <ion-title>
+      Home
+    </ion-title>
+    <ion-buttons end>
+      <button ion-button icon-only (click)="add()"><ion-icon name="add"></ion-icon></button>
+    </ion-buttons>
+  </ion-navbar>
+</ion-header>
+<!-- <ion-content>
+  <ion-tabs tabs-only>
+    <ion-tab tabTitle="BloodSugar" [root]="tab1Root"></ion-tab>
+    <ion-tab tabTitle="BloodPress" [root]="tab2Root" ></ion-tab>
+    <ion-tab tabTitle="Weight" [root]="tab3Root"></ion-tab>
+  </ion-tabs>
+</ion-content> -->
+<ion-content class="grid-basic-page">
+  <ion-grid>
+    <ion-row>
+      <ion-col>
+        <div text-center no-padding (click)="Item1()" class="item1">
+          <a>
+            <h3>Blood Sugar </h3>
+          </a>
+          <!-- <button ion-button icon-only (click)="Item1()">
+        <ion-icon name='contact'></ion-icon>
+      </button>   -->
+        </div>
+      </ion-col>
+      <ion-col>
+        <div no-padding no-margin (click)="Item2()" class="item2">
+          <a>
+            <h3>Blood Pressure </h3>
+          </a>
+          <!-- <ion-icon name="logo-apple"></ion-icon>  -->
+        </div>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <div (click)="Item3()">
+          <a>
+            <h3>Weight </h3>
+          </a>
+        </div>
+      </ion-col>
+      <ion-col>
+        <div (click)="Item4()">
+          <a>
+            <h3>Height</h3>
+          </a>
+        </div>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <div (click)="Item5()">
+          <a>
+            <h3>Notes</h3>
+          </a>
+        </div>
+      </ion-col>
+      <ion-col>
+        <div (click)="Item6()" class="item6">Something</div>
+      </ion-col>
+    </ion-row>
+
+  </ion-grid>
+</ion-content>

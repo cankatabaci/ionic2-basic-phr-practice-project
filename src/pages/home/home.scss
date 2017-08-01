@@ -1,0 +1,29 @@
+.grid-basic-page {
+
+  ion-col div {
+    background-color: #f0f5ff;
+    border: 1px solid #e6e9ee;
+    border-radius: 2px;
+    padding: 5px;
+    text-align: center;
+    min-height: 130px;
+    padding-top: 35px;
+	}
+
+  p {
+    padding: 10px 0 0 10px !important;
+    margin: 0;
+  }
+.item1{
+  animation-delay: 0.25s;
+}
+
+.item2{
+  animation-delay: 0.5s;
+}
+
+.item6{
+  animation-delay: 2.5s;
+}
+
+}

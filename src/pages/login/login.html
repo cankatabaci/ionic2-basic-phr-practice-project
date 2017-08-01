@@ -1,0 +1,51 @@
+<ion-content class="background">
+    <ion-slides pager>
+        <ion-slide>
+            <ion-card>
+                <ion-card-header>
+                    Slide1
+                </ion-card-header>
+            </ion-card>
+        </ion-slide>
+        <ion-slide>
+            <ion-card>
+                <ion-card-header>
+                    Slide2
+                </ion-card-header>
+            </ion-card>
+        </ion-slide>
+        <ion-slide>
+            <ion-card>
+                <ion-card-header>
+                    Login
+                </ion-card-header>
+                <ion-card-content>
+                    <form #loginForm="ngForm" novalidate>
+                        <ion-list no-line>
+                            <ion-item>
+                                <ion-label stacked color="primary">Username</ion-label>
+                                <ion-input [(ngModel)]="login.username" name="username" type="text" #username="ngModel" spellcheck="false" autocapitalize="off"
+                                    required>
+                                </ion-input>
+                            </ion-item>
+                            <ion-item>
+                                <ion-label stacked color="primary">Password</ion-label>
+                                <ion-input [(ngModel)]="login.password" name="password" type="password" #password="ngModel" required>
+                                </ion-input>
+                            </ion-item>
+                            <a>Forget your login detail? <b>Get help signing in</b></a>
+                            <br>
+                            <button (click)="Login()" ion-button block outline color="light">Login</button>
+                            <p>OR</p>
+                            <button ion-button block color="facebook">
+                    <ion-icon name="logo-facebook"></ion-icon>Login with Facebook
+                </button>
+                        </ion-list>
+                    </form>
+                </ion-card-content>
+                <button class="bottom" ion-button clear full color="light">Don't have an account? Sign up </button>
+            </ion-card>
+            
+        </ion-slide>
+    </ion-slides>
+</ion-content>

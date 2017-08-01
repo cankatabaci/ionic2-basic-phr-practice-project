@@ -1,0 +1,34 @@
+<ion-header>
+
+    <ion-navbar>
+        <ion-title>Blood Sugar </ion-title>
+                <ion-buttons end>
+        </ion-buttons>
+    </ion-navbar>
+
+</ion-header>
+  <ion-content>
+<ion-list class="login-giris-input" >
+
+  <ion-item>
+    <ion-label><a>Name</a></ion-label>
+    <ion-input [value]="name" [(ngModel)]="name" #Name="ngModel" type="text"></ion-input>
+  </ion-item>
+ <ion-item>
+    <ion-label><a>Email</a></ion-label>
+    <ion-input type="text" [value]="email" [(ngModel)]="email" #Email="ngModel"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label><a>Age</a></ion-label>
+    <ion-input type="text"  [value]="age" [(ngModel)]="age" #Age="ngModel"></ion-input>
+  </ion-item>
+<ion-item>
+    <ion-label><a>City</a>  </ion-label>
+    <ion-input type="text"   [value]="city" [(ngModel)]="city" #City="ngModel"></ion-input>
+  </ion-item>
+</ion-list>
+ <div padding   class="butonlar">
+<button class="register-button" ion-button (click)='AddRecord()' color="#FDB813" block >Add</button>
+ 
+</div>
+</ion-content>
