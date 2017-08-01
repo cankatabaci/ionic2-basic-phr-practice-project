@@ -5,9 +5,9 @@
 $ npm install
 ```
 Make sure the following are installed:
-    - Node JS
-    - Angular CLI
-    - Ionic CLI and Cordova
+   - Node JS:
+   - Angular CLI:
+   - Ionic CLI and Cordova:
 
 ### Running project
 
