@@ -6,6 +6,9 @@ import { WeightPage } from '../weight/weight';
 import { NotesPages } from '../notes/notes';
 import 'web-animations-js/web-animations.min';
 import { BloodSugarDetailsPage } from '../bloodsugar/bloodsugardetails/bloodsugardetails';
+import { BloodPressDetailsPage } from '../bloodpress/bloodpressdetails/bloodpressdetails';
+import { HeightDetailsPage } from '../height/heightdetails/heightdetails';
+import { WeightDetailsPage } from '../weight/weightdetails/weightdetails';
 
 @Component({
   selector: 'page-home',
@@ -62,7 +65,7 @@ export class HomePage {
             break;
           }
           case 'bloodpress': {
-            //statements; 
+            this.navCtrl.push(BloodPressDetailsPage); 
             break;
           }
           default: {

@@ -1,0 +1,23 @@
+<ion-header>
+
+    <ion-navbar>
+        <ion-title>Blood Pressure </ion-title>
+        <ion-buttons end>
+        </ion-buttons>
+    </ion-navbar>
+
+</ion-header>
+<ion-content>
+    <form #form="ngForm" (ngSubmit)="logForm(form)" novalidate>
+        <ion-item>
+            <ion-label>Todo</ion-label>
+            <ion-input type="text" required [(ngModel)]="todo.title" #Title="ngModel" ngControl="title" name="title" required></ion-input>
+            <div *ngIf="form.submitted && !Title.valid" class="help-block">Name is required</div>
+        </ion-item>
+        <ion-item>
+            <ion-label>Description</ion-label>
+            <ion-textarea [(ngModel)]="todo.description" ngControl="description" name="description"></ion-textarea>
+        </ion-item>
+        <button ion-button type="submit" block>Add Todo</button>
+    </form>
+</ion-content>

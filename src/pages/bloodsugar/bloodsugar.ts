@@ -10,32 +10,23 @@ import { HomePage } from '../home/home';
 export class BloodSugarPage {
   @ViewChild('navbar') navBar: Navbar;
   notes: any = [];
-  items: ItemDesign[];
-  item: ItemDesign = { age: "", city: "", email: "", name: "" };
-  name?: any = "";
-  age?: any = "";
-  email?: any = "";
-  city?: any = "";
+  items: IBloodSugar[];
+  item: IBloodSugar = { value: 0, day: "", date: "", bloodsugarid: 0, isactive: true };
+
 
   constructor(private platform: Platform, public navCtrl: NavController, public alertCtrl: AlertController, public navParams: NavParams, private toastCtrl: ToastController) {
 
 
 
     this.navCtrl.canGoBack();
-    this.items = [{ age: "asd", city: "adasd", email: "asd", name: "adasd" }, { age: "qwwe", city: "qwe", email: "qweqe", name: "qweqwe" }];
-    this.age = navParams.get("age");
-    this.city = navParams.get("city");
-    this.email = navParams.get("email");
-    this.name = navParams.get("name");
+    this.items = [{ value: 22, day: "Pazartesi", date: "01-08-2017"}, { value: 35, day: "Salı", date: "01-08-2017"}];
+    this.item.value = navParams.get("value");
+    this.item.day = navParams.get("day");
+    this.item.date = navParams.get("date");
 
-    if (this.age == undefined) {
+    if (this.item.day == undefined) {
 
     } else {
-      console.log(this.age, this.email, this.name, this.city);
-      this.item.age = this.age;
-      this.item.city = this.city;
-      this.item.email = this.email;
-      this.item.name = this.name;
       this.pushItems(this.item);
     }
 
@@ -46,7 +37,7 @@ export class BloodSugarPage {
       duration: 3000,
       position: 'top'
     });
-      toast.present();
+    toast.present();
   }
 
 
@@ -58,7 +49,7 @@ export class BloodSugarPage {
     };
   }
 
-  pushItems(data: ItemDesign) {
+  pushItems(data: IBloodSugar) {
     this.items.push(data);
     this.presentToast("Kayıt Eklendi!");
   }
@@ -68,15 +59,16 @@ export class BloodSugarPage {
     if (index > -1) {
       this.items.splice(index, 1);
     }
-     this.presentToast("Kayıt Silindi!");
+    this.presentToast("Kayıt Silindi!");
   }
 
 
 
 }
-export interface ItemDesign {
-  name: string;
-  email: string;
-  age: string;
-  city: string;
+export interface IBloodSugar {
+  bloodsugarid?: number;
+  value?: number;
+  day?: string;
+  isactive?: boolean;
+  date?: string;
 }

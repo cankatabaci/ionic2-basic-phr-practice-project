@@ -1,34 +1,32 @@
 <ion-header>
 
-    <ion-navbar>
-        <ion-title>Blood Sugar </ion-title>
-                <ion-buttons end>
-        </ion-buttons>
-    </ion-navbar>
+  <ion-navbar>
+    <ion-title>Blood Sugar </ion-title>
+    <ion-buttons end>
+    </ion-buttons>
+  </ion-navbar>
 
 </ion-header>
-  <ion-content>
-<ion-list class="login-giris-input" >
+<ion-content>
+  <ion-list class="login-giris-input">
+    <ion-item>
+      <ion-label><a>Value</a></ion-label>
+      <!-- <ion-input text-right [value]="value" [(ngModel)]="items.value" #Value="ngModel" type="number" min="1" required="true"></ion-input> -->
+      <ion-select [(ngModel)]="items.value" okText="Okay" cancelText="Dismiss" >
+        <ion-option *ngFor="let o of num" [value]="o">{{o}}</ion-option>
+      </ion-select>
+    </ion-item>
+    <ion-item>
+      <ion-label><a>Hour</a></ion-label>
+      <ion-datetime placeholder="Pick Hour" displayFormat="HH:mm" [(ngModel)]="items.day"></ion-datetime>
+    </ion-item>
+    <ion-item>
+      <ion-label><a>Date</a></ion-label>
+      <ion-datetime placeholder="Pick Date" displayFormat="DDDD MMM D, YYYY" min="2015-03-01" [(ngModel)]="items.date"></ion-datetime>
+    </ion-item>
+  </ion-list>
+  <div padding class="butonlar">
+    <button class="register-button" ion-button (click)='AddRecord()' color="#FDB813" block>Add</button>
 
-  <ion-item>
-    <ion-label><a>Name</a></ion-label>
-    <ion-input [value]="name" [(ngModel)]="items.name" #Name="ngModel" type="text"></ion-input>
-  </ion-item>
- <ion-item>
-    <ion-label><a>Email</a></ion-label>
-    <ion-input type="text" [value]="email" [(ngModel)]="items.email" #Email="ngModel"></ion-input>
-  </ion-item>
-  <ion-item>
-    <ion-label><a>Age</a></ion-label>
-    <ion-input type="text"  [value]="age" [(ngModel)]="items.age" #Age="ngModel"></ion-input>
-  </ion-item>
-<ion-item>
-    <ion-label><a>City</a>  </ion-label>
-    <ion-input type="text"   [value]="city" [(ngModel)]="items.city" #City="ngModel"></ion-input>
-  </ion-item>
-</ion-list>
- <div padding   class="butonlar">
-<button class="register-button" ion-button (click)='AddRecord()' color="#FDB813" block >Add</button>
- 
-</div>
+  </div>
 </ion-content>
